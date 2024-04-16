@@ -45,8 +45,6 @@ public class MessageController {
             Pageable user_message_pageable = PageRequest.of(0,5, Sort.by("time").descending());
             model.addAttribute("user_total",messageService.findByUser(loginUser.getUserID(),user_message_pageable).getTotalPages());
 
-
-
         return "message_list";
     }
 
